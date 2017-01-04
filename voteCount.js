@@ -3,6 +3,8 @@ var no = 0;
 getQuestion();
 
 function getQuestion(){
+  yes = 0;
+  no = 0;
   var question = document.getElementById("userQuestion");
   question.innerHTML = prompt("What is your yes or no question?");
 }
