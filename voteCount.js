@@ -5,8 +5,15 @@ getQuestion();
 function getQuestion(){
   yes = 0;
   no = 0;
-  var question = document.getElementById("userQuestion");
-  question.innerHTML = prompt("What is your yes or no question?");
+  refreshResults();
+  var question = document.getElementById("userQuestion","Input a question");
+  var result = prompt("What is your yes or no question?");
+
+  while(!result){
+    result = prompt("You did not put in a question. What is your yes or no question?");
+  }
+
+  question.innerHTML = result;
 }
 
 function clickYes() {
